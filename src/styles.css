@@ -96,7 +96,14 @@ button { cursor: pointer; }
   content: ""; position: absolute; inset: auto auto 1rem 1rem; width: 32%; aspect-ratio: 1; border-radius: 50%;
   background: radial-gradient(circle, rgba(191, 231, 255, 0.95), transparent 70%); filter: blur(10px);
 }
-.hero-image-shell img, .image-stack img, .feature-images img { width: 100%; height: 100%; object-fit: cover; }
+.hero-image-shell img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-stack img, .feature-images img { width: 100%; height: 100%; object-fit: cover; }
 .section-heading { max-width: 700px; margin-bottom: 1.75rem; }
 .section-heading h2 { font-size: clamp(2rem, 4.2vw, 3.6rem); line-height: 1; margin-top: 0.75rem; }
 .stats-grid, .card-grid, .kit-grid, .events-grid, .donation-grid, .allocation-grid, .testimonial-grid, .coverage-grid {
@@ -137,6 +144,7 @@ button { cursor: pointer; }
   background: rgba(255, 255, 255, 0.78); box-shadow: var(--shadow);
 }
 .footer-brand { display: flex; gap: 1rem; }
+.footer-mark { flex-shrink: 0; }
 .footer-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; }
 .footer-note { margin-top: 0.9rem; }
 .message-fab {
@@ -234,11 +242,12 @@ button { cursor: pointer; }
     inset: auto auto 0.75rem 0.75rem;
   }
   .image-stack {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     align-items: stretch;
+    gap: 0.85rem;
   }
   .image-stack img {
-    min-height: 185px;
+    min-height: 220px;
     height: 100%;
   }
   .stats-grid, .stats-grid.four-up, .card-grid, .kit-grid, .events-grid, .donation-grid, .allocation-grid, .testimonial-grid, .coverage-grid, .feature-images.two-up { grid-template-columns: 1fr; }
@@ -248,6 +257,16 @@ button { cursor: pointer; }
   .message-panel {
     right: 0.75rem; left: 0.75rem; bottom: 0.75rem; width: auto; border-radius: 30px 30px 22px 22px; max-height: min(82vh, 780px); overflow: auto;
   }
+  .footer-brand {
+    align-items: flex-start;
+  }
+  .footer-mark {
+    width: 3.2rem;
+    height: 3.2rem;
+    min-width: 3.2rem;
+    min-height: 3.2rem;
+    border-radius: 1.15rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -255,7 +274,7 @@ button { cursor: pointer; }
     min-height: 240px;
     aspect-ratio: 10 / 13;
   }
-  .image-stack img { min-height: 160px; }
+  .image-stack img { min-height: 180px; }
   .message-fab {
     right: 0.8rem;
     bottom: 0.8rem;
