@@ -1,0 +1,16 @@
+Double-click `START_WEBSITE.bat` to launch the website locally.
+
+What happens:
+- It checks whether Node.js / npm is installed
+- It installs dependencies if needed
+- It starts the website with local-network access enabled
+
+To view on this computer:
+- Open the `Local` URL shown in the terminal
+
+To view on a phone:
+- Make sure the phone is on the same Wi-Fi network
+- Open the `Network` URL shown in the terminal
+
+To stop the website:
+- Return to the terminal window and press `Ctrl + C`
