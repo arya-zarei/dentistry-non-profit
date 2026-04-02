@@ -248,7 +248,7 @@ button { cursor: pointer; }
   }
   .image-stack img {
     min-height: 220px;
-    height: 100%;
+    height: auto;
   }
   .stats-grid, .stats-grid.four-up, .card-grid, .kit-grid, .events-grid, .donation-grid, .allocation-grid, .testimonial-grid, .coverage-grid, .feature-images.two-up { grid-template-columns: 1fr; }
   .timeline-card { grid-template-columns: 1fr; }
@@ -274,7 +274,10 @@ button { cursor: pointer; }
     min-height: 240px;
     aspect-ratio: 10 / 13;
   }
-  .image-stack img { min-height: 180px; }
+  .image-stack img {
+    min-height: 180px;
+    height: auto;
+  }
   .message-fab {
     right: 0.8rem;
     bottom: 0.8rem;
